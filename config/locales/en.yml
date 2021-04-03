@@ -1,3 +1,43 @@
 en:
+  date:
+    formats:
+      default: "%m/%d/%Y"
+      short: "%m/%d"
+  time:
+    formats:
+      default: "%m/%d/%Y %H:%M"
+      short: "%H:%M"
+      notime: "%d/%m/%Y"
+  price: "$%{price}/month"
+  btn:
+    more: "Watch more"
+    book: "Booking"
   index:
-    title: "Fast Hiring"
+    title: "Co-Worker"
+    slogan: "Go on - Get creative out"
+    booking_now: "Booking now"
+    prev: "Previous"
+    next: "Next"
+    list: "Lists"
+  menu_list:
+    menu: "Menu"
+    home: "Home"
+    spaces: "Co-working spaces"
+    languages:
+      language: "Language"
+      english: "English"
+      vietnamese: "Tiếng Việt"
+    login: "Login"
+    logout: "Logout"
+    register: "Register"
+    edit_profile: "Edit profile"
+  term:
+    terms_of_use: "Terms of use"
+    privacy_and_policy: "Privacy and Policy"
+    user_manual: "User manual"
+  contact:
+    contact: "Contact"
+    address: "254 Nguyen Van Linh St, Thanh Khe, Da Nang"
+  about:
+    about_us: "About Us"
+    description: "Co-worker is a convenient co-workspace booking app."
