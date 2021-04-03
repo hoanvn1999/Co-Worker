@@ -12,6 +12,10 @@ vi:
   btn:
     more: "Xem thêm"
     book: "Đặt chỗ"
+  account:
+    account.nil: "Tài khoản không tồn tại"
+    check_email: "Vui lòng kiểm tra email và xác nhận."
+    profile_updated: "Thông tin cá nhân của bạn đã được thay đổi thành công"
   index:
     title: "Co-Worker"
     slogan: "Mở ra nguồn cảm hứng sáng tạo"
@@ -41,3 +45,12 @@ vi:
   about:
     about_us: "Về chúng tôi"
     description: "Co-worker là một ứng dụng đặt chỗ không gian làm việc chung tiện lợi."
+  login:
+    username: "Email"
+    passwd: "Mật khẩu"
+    remember_me: "Ghi nhớ"
+    btn_send_email: "Gửi email"
+    forgot_passwd: "Quên mật khẩu"
+    or_with: "Hoặc đăng nhập với"
+    invalid_user: "Sai email hoặc mật khẩu"
+    check_activation_link: "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email."

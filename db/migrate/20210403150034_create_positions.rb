@@ -3,6 +3,7 @@ class CreatePositions < ActiveRecord::Migration[6.0]
     create_table :positions do |t|
       t.string :code
       t.float :area
+      t.float :price
       t.integer :status
       t.text :description
 
