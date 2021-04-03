@@ -1,3 +1,43 @@
-en:
+vi:
+  date:
+    formats:
+      default: "%m/%d/%Y"
+      short: "%m/%d"
+  time:
+    formats:
+      default: "%m/%d/%Y %H:%M"
+      short: "%H:%M"
+      notime: "%m/%d/%Y"
+  price: "%{price} VND/tháng"
+  btn:
+    more: "Xem thêm"
+    book: "Đặt chỗ"
   index:
-    title: "Tuyển dụng nhanh"
+    title: "Co-Worker"
+    slogan: "Mở ra nguồn cảm hứng sáng tạo"
+    booking_now: "Đặt chỗ ngay"
+    prev: "Trước"
+    next: "Sau"
+    list: "Danh sách"
+  menu_list:
+    menu: "Menu"
+    home: "Trang chủ"
+    spaces: "DS Co-working space"
+    languages:
+      language: "Ngôn ngữ"
+      english: "English"
+      vietnamese: "Tiếng Việt"
+    login: "Đăng nhập"
+    logout: "Đăng xuất"
+    register: "Đăng ký"
+    edit_profile: Sửa thông tin
+  term:
+    terms_of_use: "Điều khoản sử dụng"
+    privacy_and_policy: "Chính sách và bảo mật"
+    user_manual: "Hướng dẫn sử dụng"
+  contact:
+    contact: "Liên hệ"
+    address: "254 Nguyễn Văn Linh, Thanh Khê, Đà Nẵng"
+  about:
+    about_us: "Về chúng tôi"
+    description: "Co-worker là một ứng dụng đặt chỗ không gian làm việc chung tiện lợi."
