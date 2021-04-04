@@ -12,10 +12,30 @@ en:
   btn:
     more: "Watch more"
     book: "Booking"
+    close: "Close"
+  email:
+    btn:
+      active: "Activate"
+      reset_passwd: "Reset password"
+    subject:
+      active_account: "FastRecruitment | Account activation"
+      password_reset: "FastRecruitment | Password reset"
+    hi: "Hi"
+    message:
+      active_account: "Welcome to the Co-Worker! Click on the link below to activate your account:"
+      reset_passwd: "We receive a request to change your password. If you don't take this action, please ignore this email and continue using it. To change your password, please click on the link below:"
+    signature: "Best regards, <br>The Co-Worker team"
   account:
+    activated: "Account activated!"
+    invalid_active_link: "Invalid activation link"
+    invalid_reset_passwd_link: "Invalid reset password link"
     account.nil: "Account is not exist"
+    create_fail: "Login failed. An error occurred, please check the information again"
     check_email: "Please check your email to active your account."
     profile_updated: "Your personal information has been successfully changed"
+    update_fail: "Update failed, please check the information again"
+    passwd_updated: "Your password has been successfully changed"
+    change_pwd_fail: "Change password failed, please check the information again"
   index:
     title: "Co-Worker"
     slogan: "Go on - Get creative out"
@@ -54,3 +74,24 @@ en:
     or_with: "Or Sign In With"
     invalid_user: "Wrong email or password"
     check_activation_link: Account not activated. Check your email for the activation link."
+  register:
+    passwd_conf: "Confirm password"
+    full_name: "Fullname"
+    phone: "Phone number"
+    birthday: "Birthday"
+    address: "Address"
+    btn_next: "Next step"
+    btn_prev: "Previous step"
+    roles:
+      renter: "Renter"
+      rentee: "Rentee"
+      admin: "Admin"
+    reset_passwd:
+      email_sent: "Email sent with password reset instructions"
+      email_nil: "Email address not found"
+      input_field: "Please enter password"
+      expired: "Password reset has expired."
+  update:
+    btn: "Update"
+    update_passwd: "Change password"
+    old_passwd: "Old password"

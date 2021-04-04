@@ -54,14 +54,14 @@
                 <small><%= current_user.email %></small>
               </li>
               <hr>
-              <li class="nav-item text-center"><%= link_to t("menu_list.edit_profile"), "#", class:"btn btn-primary w-100 mb-2" %></li>
-              <li class="nav-item text-center"><%= link_to t("update.update_passwd"), "#", class:"btn btn-primary w-100 mb-2" %></li>
+              <li class="nav-item text-center"><%= link_to t("menu_list.edit_profile"), edit_users_path, class:"btn btn-primary w-100 mb-2" %></li>
+              <li class="nav-item text-center"><%= link_to t("update.update_passwd"), change_password_users_path, class:"btn btn-primary w-100 mb-2" %></li>
               <li class="nav-item text-center"><%= link_to t("menu_list.logout"), logout_path, class:"btn btn-primary w-100", method: :delete %></li>
             <ul>
           </li>
         <% else %>
           <li class="nav-item <%= current_class?("sessions") %>"><%= link_to t("menu_list.login"), login_path, class:"nav-link" %></li>
-          <li class="nav-item <%= current_class?("users") %> cta ml-4"><%= link_to t("menu_list.register"), "#", class:"nav-link" %></li>
+          <li class="nav-item <%= current_class?("users") %> cta ml-4"><%= link_to t("menu_list.register"), new_users_path, class:"nav-link" %></li>
         <% end %>
       </li>
     </div>
