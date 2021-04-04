@@ -13,6 +13,7 @@ vi:
     more: "Xem thêm"
     book: "Đặt chỗ"
     close: "Thoát"
+    search: "Tìm kiếm"
   email:
     btn:
       active: "Kích hoạt"
@@ -95,3 +96,9 @@ vi:
     btn: "Cập nhật"
     update_passwd: "Đổi mật khẩu"
     old_passwd: "Mật khẩu cũ"
+  space:
+    name: "Tên"
+    address: "Địa chỉ"
+    description: "Mô tả"
+    price: "Đơn giá"
+    area: "Diện tích"

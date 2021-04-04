@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2021_04_03_152013) do
   end
 
   create_table "bookings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "position"
     t.datetime "start_time"
     t.datetime "end_time"
     t.float "current_price"
@@ -41,17 +42,15 @@ ActiveRecord::Schema.define(version: 2021_04_03_152013) do
     t.text "feedback"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "positions_id"
+    t.bigint "spaces_id"
     t.bigint "user_id"
-    t.index ["positions_id"], name: "index_bookings_on_positions_id"
+    t.index ["spaces_id"], name: "index_bookings_on_spaces_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "positions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "code"
-    t.float "area"
-    t.float "price"
-    t.integer "status"
+    t.integer "status", default: 0
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -62,6 +61,8 @@ ActiveRecord::Schema.define(version: 2021_04_03_152013) do
   create_table "spaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "address"
+    t.float "area"
+    t.float "price"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -89,7 +90,7 @@ ActiveRecord::Schema.define(version: 2021_04_03_152013) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "bookings", "positions", column: "positions_id"
+  add_foreign_key "bookings", "spaces", column: "spaces_id"
   add_foreign_key "bookings", "users"
   add_foreign_key "positions", "spaces"
   add_foreign_key "spaces", "users"

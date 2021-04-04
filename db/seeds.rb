@@ -35,3 +35,21 @@ myself.save
                          filename: "avatar#{n}.jpg", content_type: "image/jpg")
   user.save
 end
+
+74.times do |n|
+  space = Space.new(user_id: rand(1..5),
+                    name: Faker::Company.name,
+                    address: Faker::Address.full_address,
+                    area: rand(10..30),
+                    price: rand(15..100),
+                    description: Faker::Lorem.paragraphs)
+  space.space_image.attach(io: File.open("app/assets/images/spaces/cw-#{n+1}.jpg"),
+                           filename: "space-#{n+1}.jpg", content_type: "image/jpg")
+  space.map.attach(io: File.open("app/assets/images/spaces/map.jpg"),
+                   filename: "map-#{n+1}.jpg", content_type: "image/jpg")
+  space.save
+  5.times do |s|
+    Position.create!(space_id: n+1,
+                     code: "SP-#{n+1}-#{s+1}")
+  end
+end

@@ -13,6 +13,7 @@ en:
     more: "Watch more"
     book: "Booking"
     close: "Close"
+    search: "Search"
   email:
     btn:
       active: "Activate"
@@ -95,3 +96,9 @@ en:
     btn: "Update"
     update_passwd: "Change password"
     old_passwd: "Old password"
+  space:
+    name: "Space name"
+    address: "Address"
+    description: "Description"
+    price: "Price"
+    area: "Area"
