@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(version: 2021_04_03_152013) do
     t.text "feedback"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "spaces_id"
+    t.bigint "space_id"
     t.bigint "user_id"
-    t.index ["spaces_id"], name: "index_bookings_on_spaces_id"
+    t.index ["space_id"], name: "index_bookings_on_space_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 2021_04_03_152013) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "bookings", "spaces", column: "spaces_id"
+  add_foreign_key "bookings", "spaces"
   add_foreign_key "bookings", "users"
   add_foreign_key "positions", "spaces"
   add_foreign_key "spaces", "users"

@@ -70,6 +70,7 @@ en:
     username: "Email"
     passwd: "Password"
     remember_me: "Remember me"
+    first: "You have to login first"
     btn_send_email: "Send me email"
     forgot_passwd: "Forgot password"
     or_with: "Or Sign In With"
@@ -102,3 +103,9 @@ en:
     description: "Description"
     price: "Price"
     area: "Area"
+  book:
+    success: "Booking success"
+    fail: "Booking fail"
+    start_time: "Start date"
+    end_time: "End date"
+    position: "Position"

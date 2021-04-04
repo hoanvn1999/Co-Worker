@@ -70,6 +70,7 @@ vi:
     username: "Email"
     passwd: "Mật khẩu"
     remember_me: "Ghi nhớ"
+    first: "Bạn phải đăng nhập trước khi sử dụng"
     btn_send_email: "Gửi email"
     forgot_passwd: "Quên mật khẩu"
     or_with: "Hoặc đăng nhập với"
@@ -102,3 +103,9 @@ vi:
     description: "Mô tả"
     price: "Đơn giá"
     area: "Diện tích"
+  book:
+    success: "Đặt chỗ thành công"
+    fail: "Đặt chỗ thất bại"
+    start_time: "Ngày bắt đầu"
+    end_time: "Ngày kết thúc"
+    position: "Vị trí"

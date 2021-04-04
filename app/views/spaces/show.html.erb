@@ -11,7 +11,7 @@
         <p class="text-primary"><i class="fa fa-map-marker mr-2"> </i><%= @space.address %></p>
         <p><span class="font-weight-bold"><%= t "space.price" %>: </span> <%= t("price", price: exchange_money(@space.price)) %></p>
         <p><span class="font-weight-bold"><%= t "space.area" %>: </span> <%= @space.area %>m<sup>2</sup></p>
-        <%= link_to t("index.booking_now"), bookings_path(id: @space.id), class: "ml-5 btn btn-primary" %>
+        <%= link_to t("index.booking_now"), new_booking_path(space_id: @space.id), class: "ml-5 btn btn-primary" %>
         <div class="text-center">
         </div>
       </div>

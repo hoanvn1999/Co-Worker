@@ -6,12 +6,12 @@ class Booking < ApplicationRecord
   validate :start_date_cannot_be_later_than_end_date
 
   def start_date_cannot_be_in_the_past
-    errors.add(:start_date, "can't be in the past") if
-      start_date.present? && start_date < Time.zone.today
+    errors.add(:start_time, "can't be in the past") if
+      start_time.present? && start_time < Time.zone.today
   end
 
   def start_date_cannot_be_later_than_end_date
-    errors.add(:start_date, "can't be later than", :end_date) if
-      start_date.present? && end_date.present? && start_date < end_date
+    errors.add(:start_time, "can't be later") if
+      start_time.present? && end_time.present? && start_time > end_time
   end
 end
