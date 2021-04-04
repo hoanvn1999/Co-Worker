@@ -13,6 +13,6 @@ Rails.application.routes.draw do
     resources :account_activations, only: :edit
     resources :password_resets, except: [:index, :show, :destroy]
     resources :spaces, only: [:index, :show]
-    resources :bookings, only: [:now, :create]
+    resources :bookings, only: [:new, :create]
   end
 end

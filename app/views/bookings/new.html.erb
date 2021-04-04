@@ -1,0 +1,48 @@
+<div class="short-wrap"></div>
+
+<section class="ftco-section">
+  <div class="container heading-section text-center mb-3">
+    <h2 class="subheading"><%= t "btn.book" %></h2>
+  </div>
+  <div class="container">
+    <div class="row col-md-6 mx-auto mb-4">
+      <h5><span class="font-weight-bold"><%= t "space.name" %>: </span><%= @space.name %></h5>
+      <div>
+        <i class="fa fa-map-marker mr-2"> </i>
+        <%= @space.address %>
+      </div>
+      <div>
+        <span class="font-weight-bold"><%= t "space.area" %>: </span> <%= @space.area %>m<sup>2</sup>
+      </div>
+      <div>
+        <span class="font-weight-bold"><%= t "space.price" %>: </span> <%= t("price", price: exchange_money(@space.price)) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5 mx-auto">
+        <%= image_tag @space.map, class: "img-fluid" %>
+      </div>
+      <div class="col-md-7">
+        <%= form_for @booking, url: bookings_path(space_id: @space.id), method: :post do |f| %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <%= f.hidden_field :space_id, value: @space.id %>
+          <div class="form-group row">
+            <div class="col-md-3"><%= t "book.position" %></div>
+            <%= f.select :position, options_for_select(Position.select("code").where(space_id: @space.id).map{|f| f.code}), {}, class: "col-md-6 form-control" %>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-3"><%= t "book.start_time" %></div>
+            <%= f.date_field :start_time, class: "col-md-6 form-control" %>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-3"><%= t "book.end_time" %></div>
+            <%= f.date_field :end_time, class: "col-md-6  form-control" %>
+          </div>
+          <div class="form-group row">
+            <%= f.submit t("btn.book"), class: "form-control btn btn-primary submit px-3 col-5 mx-auto" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
