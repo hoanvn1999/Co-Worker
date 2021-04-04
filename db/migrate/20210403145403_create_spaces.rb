@@ -3,7 +3,6 @@ class CreateSpaces < ActiveRecord::Migration[6.0]
     create_table :spaces do |t|
       t.string :name
       t.string :address
-      t.float :price
       t.text :description
 
       t.timestamps

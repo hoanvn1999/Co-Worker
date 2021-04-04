@@ -12,6 +12,10 @@ en:
   btn:
     more: "Watch more"
     book: "Booking"
+  account:
+    account.nil: "Account is not exist"
+    check_email: "Please check your email to active your account."
+    profile_updated: "Your personal information has been successfully changed"
   index:
     title: "Co-Worker"
     slogan: "Go on - Get creative out"
@@ -41,3 +45,12 @@ en:
   about:
     about_us: "About Us"
     description: "Co-worker is a convenient co-workspace booking app."
+  login:
+    username: "Email"
+    passwd: "Password"
+    remember_me: "Remember me"
+    btn_send_email: "Send me email"
+    forgot_passwd: "Forgot password"
+    or_with: "Or Sign In With"
+    invalid_user: "Wrong email or password"
+    check_activation_link: Account not activated. Check your email for the activation link."

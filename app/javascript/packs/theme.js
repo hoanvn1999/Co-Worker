@@ -2,6 +2,44 @@
 
   "use strict";
 
+  $(".nav-link").on("click", function() {
+    $(".nav-link").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  for (let i = 0; i < $('.toggle-password').length; i++) {
+    $('.toggle-password').eq(i).click(function () {
+      $('.eye-pic').eq(i).toggleClass("fa-eye fa-eye-slash");
+      var input = $($(this).attr("toggle"));
+      if (input.attr("type") == "password") {
+        input.attr("type", "text");
+      } else {
+        input.attr("type", "password");
+      }
+    });
+  }
+
+  $("#user_avatar, #institution_logo, #job_post_image").change(function (e) {
+
+    for (var i = 0; i < e.originalEvent.srcElement.files.length; i++) {
+
+      var file = e.originalEvent.srcElement.files[i];
+
+      var img = document.getElementById("output_image");
+      var reader = new FileReader();
+      reader.onloadend = function () {
+        img.src = reader.result;
+      }
+      reader.readAsDataURL(file);
+      $("#session_avatar").after(img);
+    }
+  });
+
+  $("#btn-register-next, #btn-register-prev").click(function () {
+    $("#register-form-1").toggleClass("d-none");
+    $("#register-form-2").toggleClass("d-none");
+  });
+
   var fullHeight = function () {
 
     $('.js-fullheight').css('height', $(window).height());

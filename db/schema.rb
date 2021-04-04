@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2021_04_03_152013) do
   create_table "positions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "code"
     t.float "area"
+    t.float "price"
     t.integer "status"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
@@ -61,7 +62,6 @@ ActiveRecord::Schema.define(version: 2021_04_03_152013) do
   create_table "spaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.float "price"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
