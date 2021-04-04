@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   has_many :spaces
   has_many :bookings
-  has_many :positions, through: :bookings
+  has_many :spaces, through: :bookings
   has_one_attached :avatar
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze

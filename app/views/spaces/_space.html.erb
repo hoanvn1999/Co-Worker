@@ -1,0 +1,15 @@
+<div class="col-md-4">
+  <div class="project-wrap">
+    <%= link_to space_path(id: space.id), class: "img" do %>
+      <%= image_tag space.space_image, class: "img" %>
+      <span class="price"><%= t("price", price: exchange_money(space.price)) %></span>
+    <% end %>
+    <div class="text p-4">
+      <div class="type"><i class="fa fa-map-marker"></i><%= space.address %></div>
+      <h3><a href="#"><%= space.name %></a></h3>
+      <div class="text-center">
+        <%= link_to t("btn.book"), bookings_path(id: space.id), class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

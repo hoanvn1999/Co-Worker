@@ -1,3 +1,5 @@
 class HomepageController < ApplicationController
-  def index; end
+  def index
+    @spaces = Space.all.limit(9)
+  end
 end

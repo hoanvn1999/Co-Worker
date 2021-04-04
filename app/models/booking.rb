@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :user
-  belongs_to :position
+  belongs_to :space
 
   validate :start_date_cannot_be_in_the_past
   validate :start_date_cannot_be_later_than_end_date

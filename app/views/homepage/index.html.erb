@@ -24,24 +24,8 @@
       </div>
     </div>
     <div class="row">
-      <% for i in 0..8 %>
-				<div class="col-md-4">
-					<div class="project-wrap">
-						<%= link_to "path", class: "img" do %>
-							<%= image_tag "wallpaper.jpg", class: "img" %>
-							<span class="price"><%= t("price", price: exchange_money(3000000)) %></span><!-- change -->
-						<% end %>
-						<div class="text p-4">
-              <div class="type"><i class="fa fa-map-marker"></i><%= ["Da Nang", "Ha Noi", "HCM"].sample %></div><!-- change -->
-							<h3><a href="#"><%= Faker::Company.name + " " + Faker::Company.suffix %></a></h3><!-- change -->
-              <div class="text-center">
-                <%= link_to t("btn.book"), "#", class: "btn btn-primary" %><!-- change -->
-              </div>
-						</div>
-					</div>
-				</div>
-			<% end %>
+      <%= render partial: "spaces/space", collection: @spaces %>
     </div>
-    <div class="w-100 text-center"><%= link_to t("btn.more"), "#", class: "btn btn-primary" %></div><!-- change -->
+    <div class="w-100 text-center"><%= link_to t("btn.more"), spaces_path, class: "btn btn-primary" %></div><!-- change -->
   </div>
 </section>
